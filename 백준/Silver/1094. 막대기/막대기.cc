@@ -3,8 +3,8 @@
 int count_sticks(int X) {
     int count = 0;
     while (X > 0) {
-        if (X & 1) count++; // X의 최하위 비트가 1이면 count 증가
-        X >>= 1; // X를 오른쪽으로 1비트 시프트
+        if (X & 1) count++;
+        X >>= 1;
     }
     return count;
 }
