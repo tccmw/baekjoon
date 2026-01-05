@@ -1,16 +1,11 @@
 def solution(n):
     count = 0
-    start = 1  # i 초기값
-    while start <= n:
+    for start in range(1, n+1):
         total = 0
         i = start
-        while i <= n:
+        while total < n:
             total += i
-            if total == n:
-                count += 1
-                break
-            elif total > n:
-                break
             i += 1
-        start += 1  # 사이클이 끝날 때 i 초기값 1 증가
+        if total == n:
+            count += 1
     return count
